@@ -35,7 +35,7 @@ https://github.com/alex-shpak/hugo-book
 <link rel="stylesheet" href="/book.min.4eb4e37676c7d64d542857ee447ce3d87917eb43dfe34afcd9e7692c239498c5.css" integrity="sha256-TrTjdnbH1k1UKFfuRHzj2HkX60Pf40r82edpLCOUmMU=" crossorigin="anonymous">
 
 
-  <script defer type="module" src="/en.search.min.d1517781797825df1b9363a89fbfe67860b1aaa1a990f57f13c889f41310c511.js" integrity="sha256-0VF3gXl4Jd8bk2Oon7/meGCxqqGpkPV/E8iJ9BMQxRE=" crossorigin="anonymous"></script>
+  <script defer type="module" src="/en.search.min.be181f5eed85d9b2b650da1a66ce9379366cdb70417864dd4963b2e98b44a022.js" integrity="sha256-vhgfXu2F2bK2UNoaZs6TeTZs23BBeGTdSWOy6YtEoCI=" crossorigin="anonymous"></script>
 
   
 </head>
@@ -311,9 +311,13 @@ https://github.com/alex-shpak/hugo-book
       <strong id="final-score">12</strong>
       <span>балів</span>
     </div>
-    <div class="coin-badge">
-      <span>🪙 Нараховано монет:</span>
-      <strong id="final-coins">+60</strong>
+    <div class="coin-badge" style="display: inline-flex; align-items: center; gap: 8px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#fbbf24" style="filter: drop-shadow(0 2px 4px rgba(245,158,11,0.35)); margin-right: 4px;">
+        <circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/>
+        <text x="12" y="16" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">c</text>
+      </svg>
+      <span>Нараховано монет:</span>
+      <strong style="color: #fbbf24; font-size: 1.2rem;">+<span id="earned-coins">0</span></strong>
     </div>
   </div>
 
@@ -334,10 +338,16 @@ https://github.com/alex-shpak/hugo-book
   let isCompleted = false;
   let reviewMode = false;
 
-  // Event listener for message from React parent to activate Review Mode
+  // Event listener for messages from React parent
   window.addEventListener('message', function(event) {
     if (event.data.type === 'SET_COMPLETED_STATUS' && event.data.isCompleted) {
       activateReviewMode();
+    }
+    if (event.data.type === 'UPDATE_COINS_DISPLAY') {
+      const coinsEl = document.getElementById('earned-coins');
+      if (coinsEl) {
+        coinsEl.innerText = event.data.coins;
+      }
     }
   });
 
@@ -436,7 +446,8 @@ https://github.com/alex-shpak/hugo-book
     // Set dynamic score values on final page
     const final12Score = calculateScore(1, totalTests);
     document.getElementById('final-score').textContent = final12Score;
-    document.getElementById('final-coins').textContent = `+${final12Score * 5}`;
+    const coinsEl = document.getElementById('earned-coins');
+    if (coinsEl) coinsEl.textContent = `${final12Score * 5}`;
     
     // Switch to final block immediately
     showStep(4);
@@ -520,7 +531,8 @@ https://github.com/alex-shpak/hugo-book
     
     // Dynamically write score and coin values
     document.getElementById('final-score').textContent = final12Score;
-    document.getElementById('final-coins').textContent = `+${final12Score * 5}`;
+    const coinsEl = document.getElementById('earned-coins');
+    if (coinsEl) coinsEl.textContent = `${final12Score * 5}`;
     
     showStep(4);
     
