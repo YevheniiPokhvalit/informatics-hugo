@@ -26,7 +26,7 @@ weight: 1
   </div>
   
   <div class="quest-nav">
-    <button type="button" class="quest-nav-btn" disabled>
+    <button type="button" id="btn-back-1" class="quest-nav-btn" style="display: none;" disabled>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
       Назад
     </button>
@@ -68,14 +68,14 @@ weight: 1
   <div id="quiz-feedback-2" class="feedback-box"></div>
 
   <div class="quest-nav">
-    <button type="button" class="quest-nav-btn" onclick="showStep(1)">
+    <button type="button" id="btn-back-2" class="quest-nav-btn" style="display: none;" onclick="showStep(1)">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
       Назад
     </button>
     <button type="button" id="btn-submit-2" class="quest-btn" onclick="checkBlock2Answer()">
       Перевірити відповідь
     </button>
-    <button type="button" id="btn-next-2" class="quest-nav-btn" disabled onclick="showStep(3)">
+    <button type="button" id="btn-next-2" class="quest-nav-btn" style="display: none;" disabled onclick="showStep(3)">
       Далі
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
     </button>
@@ -97,7 +97,7 @@ weight: 1
   </div>
 
   <div class="quest-nav">
-    <button type="button" class="quest-nav-btn" onclick="showStep(2)">
+    <button type="button" id="btn-back-3" class="quest-nav-btn" style="display: none;" onclick="showStep(2)">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
       Назад
     </button>
@@ -129,7 +129,7 @@ weight: 1
   </div>
 
   <div class="quest-nav" style="justify-content: center; gap: 20px; border-top: none; margin-top: 10px;">
-    <button type="button" class="quest-nav-btn" onclick="showStep(3)">
+    <button type="button" id="btn-back-4" class="quest-nav-btn" style="display: none;" onclick="showStep(3)">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
       Назад
     </button>
@@ -143,6 +143,14 @@ weight: 1
   // Quest Configuration
   const totalTests = 1;
   let isCompleted = false;
+  let reviewMode = false;
+
+  // Event listener for message from React parent to activate Review Mode
+  window.addEventListener('message', function(event) {
+    if (event.data.type === 'SET_COMPLETED_STATUS' && event.data.isCompleted) {
+      activateReviewMode();
+    }
+  });
 
   // Grade calculation formula: (CorrectAnswers / TotalTests) * 12
   function calculateScore(correctAnswers, total) {
@@ -186,28 +194,32 @@ weight: 1
     }, 1000);
   }
 
-  // Disable all timers and allow free navigation
-  function bypassTimers() {
+  // Activate Review Mode (bypass limitations, enable nav, skip tests, prevent score duplication)
+  function activateReviewMode() {
+    reviewMode = true;
     isCompleted = true;
     
-    // Clear any running intervals
+    // Clear any running intervals/timers
     if (timers.step1.interval) clearInterval(timers.step1.interval);
     if (timers.step3.interval) clearInterval(timers.step3.interval);
     
-    // Enable all navigation buttons
+    // Enable all primary buttons
     const btnNext1 = document.getElementById('btn-next-1');
     const btnNext2 = document.getElementById('btn-next-2');
     const btnFinish3 = document.getElementById('btn-finish-3');
     
     if (btnNext1) btnNext1.disabled = false;
-    if (btnNext2) btnNext2.disabled = false;
+    if (btnNext2) {
+      btnNext2.disabled = false;
+      btnNext2.style.display = 'inline-block';
+    }
     if (btnFinish3) btnFinish3.disabled = false;
     
-    // Update labels to show completion
+    // Reset timer labels (no count down text)
     const t1 = document.getElementById('timer-1');
     const t3 = document.getElementById('timer-3');
-    if (t1) t1.textContent = 'Матеріал вивчено (пройдено раніше).';
-    if (t3) t3.textContent = 'Матеріал вивчено (пройдено раніше).';
+    if (t1) t1.textContent = 'Матеріал вивчено.';
+    if (t3) t3.textContent = 'Матеріал вивчено.';
     
     const container1 = document.getElementById('timer-container-1');
     const container3 = document.getElementById('timer-container-3');
@@ -219,14 +231,26 @@ weight: 1
     if (icon1) icon1.textContent = '✅';
     if (icon3) icon3.textContent = '✅';
 
-    // Auto check correct answer B
+    // Auto-check correct answer B
     const radioB = document.querySelector('input[name="q-block2"][value="B"]');
     if (radioB) radioB.checked = true;
 
-    // Prefill grades
-    const score12 = calculateScore(1, totalTests);
-    document.getElementById('final-score').textContent = score12;
-    document.getElementById('final-coins').textContent = `+${score12 * 5}`;
+    // Show Back buttons for simple navigation
+    const back2 = document.getElementById('btn-back-2');
+    const back3 = document.getElementById('btn-back-3');
+    const back4 = document.getElementById('btn-back-4');
+    
+    if (back2) back2.style.display = 'inline-block';
+    if (back3) back3.style.display = 'inline-block';
+    if (back4) back4.style.display = 'inline-block';
+
+    // Set dynamic score values on final page
+    const final12Score = calculateScore(1, totalTests);
+    document.getElementById('final-score').textContent = final12Score;
+    document.getElementById('final-coins').textContent = `+${final12Score * 5}`;
+    
+    // Switch to final block immediately
+    showStep(4);
   }
 
   // Handle step transitions
@@ -271,17 +295,22 @@ weight: 1
       
       const final12Score = calculateScore(1, totalTests);
       
-      // Send LESSON_COMPLETED postMessage to parent React window with 12-grade score
-      window.parent.postMessage({
-        type: 'LESSON_COMPLETED',
-        lesson_id: 1,
-        score: final12Score,
-        step: 3
-      }, '*');
+      // Send LESSON_COMPLETED only if we are NOT in reviewMode
+      if (!reviewMode) {
+        window.parent.postMessage({
+          type: 'LESSON_COMPLETED',
+          lesson_id: 1,
+          score: final12Score,
+          step: 3
+        }, '*');
+      }
       
       // Enable next step button on Card 2
       const btnNext2 = document.getElementById('btn-next-2');
-      if (btnNext2) btnNext2.disabled = false;
+      if (btnNext2) {
+        btnNext2.disabled = false;
+        btnNext2.style.display = 'inline-block';
+      }
       
       proceedToStep3();
     } else {
@@ -315,7 +344,7 @@ weight: 1
       timestamp: new Date().toISOString()
     };
     
-    if (window.parent && window.parent !== window) {
+    if (window.parent && window.parent !== window && !reviewMode) {
       window.parent.postMessage({
         type: 'QUEST_FINISHED',
         payload: finalPayload
@@ -330,29 +359,19 @@ weight: 1
     }
   }
 
-  // Listen for lesson status events from React parent
-  window.addEventListener('message', (event) => {
-    const message = event.data;
-    if (message && message.type === 'LESSON_STATUS_RESPONSE') {
-      if (message.status === 'completed') {
-        bypassTimers();
-        showStep(4); // Immediately show success screen
-      }
-    }
-  });
-
-  // Ask for status and start timer on load
+  // Start timer on load
   document.addEventListener('DOMContentLoaded', () => {
+    // Notify parent React app that we are ready to receive state
     if (window.parent && window.parent !== window) {
-      window.parent.postMessage({ type: 'CHECK_LESSON_STATUS', lesson_id: 1 }, '*');
+      window.parent.postMessage({ type: 'IFRAME_READY', lesson_id: 1 }, '*');
     }
     
-    // Fallback: Start step1 timer in case React doesn't reply or isn't connected
+    // Fallback: Start timer 500ms after load if no completed status is received
     setTimeout(() => {
       if (!isCompleted) {
         startQuestTimer('step1');
       }
-    }, 100);
+    }, 500);
   });
 </script>
 {{< /rawhtml >}}
