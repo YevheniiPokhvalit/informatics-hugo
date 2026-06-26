@@ -3,6 +3,7 @@ title: "Пошук в Інтернеті. Розширений пошук"
 weight: 1
 ---
 
+{{< rawhtml >}}
 <!-- Block 1: Theory (Lebedev's MESM and Video) -->
 <div class="step-block" id="step-1" style="display: block;">
   <h2>Крок 1. Перший комп'ютер Європи — МЕОМ Лебедєва</h2>
@@ -249,3 +250,4 @@ weight: 1
     startQuestTimer('step1');
   });
 </script>
+{{< /rawhtml >}}
