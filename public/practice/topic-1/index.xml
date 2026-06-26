@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Тема 1. Пошук в Інтернеті on Інформатика 7 клас</title>
-    <link>http://localhost:1313/practice/topic-1/</link>
+    <link>https://example.org/practice/topic-1/</link>
     <description>Recent content in Тема 1. Пошук в Інтернеті on Інформатика 7 клас</description>
     <generator>Hugo</generator>
     <language>uk-ua</language>
-    <atom:link href="http://localhost:1313/practice/topic-1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/practice/topic-1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Пошук в Інтернеті. Розширений пошук</title>
-      <link>http://localhost:1313/practice/topic-1/lesson-1/</link>
+      <link>https://example.org/practice/topic-1/lesson-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/practice/topic-1/lesson-1/</guid>
-      <description>&lt;h1 id=&#34;пошук-в-інтернеті-розширений-пошук&#34;&gt;Пошук в Інтернеті. Розширений пошук&lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d0%be%d1%88%d1%83%d0%ba-%d0%b2-%d1%96%d0%bd%d1%82%d0%b5%d1%80%d0%bd%d0%b5%d1%82%d1%96-%d1%80%d0%be%d0%b7%d1%88%d0%b8%d1%80%d0%b5%d0%bd%d0%b8%d0%b9-%d0%bf%d0%be%d1%88%d1%83%d0%ba&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Вітаємо на першому уроці інформатики для 7 класу! Сьогодні ми дізнаємося, як зробити ваш пошук в Інтернеті професійним, швидким та точним.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-навіщо-потрібен-розширений-пошук&#34;&gt;1. Навіщо потрібен розширений пошук?&lt;a class=&#34;anchor&#34; href=&#34;#1-%d0%bd%d0%b0%d0%b2%d1%96%d1%89%d0%be-%d0%bf%d0%be%d1%82%d1%80%d1%96%d0%b1%d0%b5%d0%bd-%d1%80%d0%be%d0%b7%d1%88%d0%b8%d1%80%d0%b5%d0%bd%d0%b8%d0%b9-%d0%bf%d0%be%d1%88%d1%83%d0%ba&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Коли ми вводимо простий запит у пошуковий рядок Google, система повертає мільйони вебсторінок. Більшість із них можуть бути нерелевантними. Для того щоб звузити коло пошуку та швидко знайти потрібні відомості (наприклад, конкретний документ, статтю певною мовою чи зображення з певними ліцензійними правами), використовують &lt;strong&gt;інструменти пошуку&lt;/strong&gt; та &lt;strong&gt;розширений пошук&lt;/strong&gt;.&lt;/p&gt;</description>
+      <guid>https://example.org/practice/topic-1/lesson-1/</guid>
+      <description>&lt;!-- Block 1: Theory (Lebedev&#39;s MESM and Video) --&gt;&#xA;&lt;div class=&#34;step-block&#34; id=&#34;step-1&#34; style=&#34;display: block;&#34;&gt;&#xA;  &lt;h2&gt;Крок 1. Перший комп&#39;ютер Європи — МЕОМ Лебедєва&lt;/h2&gt;&#xA;  &lt;p&gt;Вітаємо у навчальному квесті! Для початку уважно ознайомся з теоретичним матеріалом та переглянь навчальне відео.&lt;/p&gt;&#xA;  &lt;div style=&#34;background: rgba(255,255,255,0.02); border-left: 4px solid #3b82f6; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;&#34;&gt;&#xA;    &lt;p&gt;&lt;strong&gt;МЕОМ&lt;/strong&gt; (Мала електронна обчислювальна машина) — це перша в континентальній Європі електронно-обчислювальна машина з накопиченням програми в оперативній пам&#39;яті. Вона була створена в Києві (у селищі Феофанія) в Інституті електротехніки Академії наук УРСР під керівництвом видатного вченого &lt;strong&gt;Сергія Олексійовича Лебедєва&lt;/strong&gt; в 1948–1951 роках.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

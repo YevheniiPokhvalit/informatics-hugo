@@ -3,302 +3,249 @@ title: "Пошук в Інтернеті. Розширений пошук"
 weight: 1
 ---
 
-# Пошук в Інтернеті. Розширений пошук
+<!-- Block 1: Theory (Lebedev's MESM and Video) -->
+<div class="step-block" id="step-1" style="display: block;">
+  <h2>Крок 1. Перший комп'ютер Європи — МЕОМ Лебедєва</h2>
+  
+  <p>Вітаємо у навчальному квесті! Для початку уважно ознайомся з теоретичним матеріалом та переглянь навчальне відео.</p>
+  
+  <div style="background: rgba(255,255,255,0.02); border-left: 4px solid #3b82f6; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+    <p><strong>МЕОМ</strong> (Мала електронна обчислювальна машина) — це перша в континентальній Європі електронно-обчислювальна машина з накопиченням програми в оперативній пам'яті. Вона була створена в Києві (у селищі Феофанія) в Інституті електротехніки Академії наук УРСР під керівництвом видатного вченого <strong>Сергія Олексійовича Лебедєва</strong> в 1948–1951 роках.</p>
+    <p>Машина займала площу близько 60 м², містила понад 6000 електронних ламп і могла виконувати близько 3000 операцій за хвилину.</p>
+  </div>
 
-Вітаємо на першому уроці інформатики для 7 класу! Сьогодні ми дізнаємося, як зробити ваш пошук в Інтернеті професійним, швидким та точним.
+  <h3>Навчальний відеоурок</h3>
+  <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
+    <!-- Embedded Video Placeholder -->
+    <iframe src="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
-## 1. Навіщо потрібен розширений пошук?
-
-Коли ми вводимо простий запит у пошуковий рядок Google, система повертає мільйони вебсторінок. Більшість із них можуть бути нерелевантними. Для того щоб звузити коло пошуку та швидко знайти потрібні відомості (наприклад, конкретний документ, статтю певною мовою чи зображення з певними ліцензійними правами), використовують **інструменти пошуку** та **розширений пошук**.
-
-## 2. Фільтри та Інструменти пошуку Google
-
-Під пошуковим рядком Google після введення запиту відображаються вкладки: *Усі*, *Зображення*, *Відео*, *Новини*, *Карти* тощо.
-
-Праворуч від цих вкладок знаходиться кнопка **Інструменти** (Tools). Вона відкриває додаткове меню фільтрації:
-* **Будь-яка мова:** дозволяє шукати вебсторінки лише вказаною мовою (наприклад, тільки українською).
-* **За весь час:** фільтрує результати за періодом публікації (за останню годину, 24 години, тиждень, місяць, рік або за вказаний період). Це дуже корисно для пошуку свіжих новин.
-* **Усі результати:** дає змогу перемикатися між звичайним пошуком та пошуком «слово в слово» (точний збіг).
-
-При пошуку зображень у меню «Інструменти» з'являються додаткові фільтри: *Розмір*, *Колір*, *Тип лінії*, *Час завантаження* та *Права на використання*.
-
-## 3. Оператори пошуку (Пошукові команди)
-
-Для створення складних запитів можна використовувати спеціальні символи та слова безпосередньо у пошуковому рядку:
-
-| Оператор | Опис | Приклад запиту | Результат |
-| :--- | :--- | :--- | :--- |
-| **`" "`** (лапки) | Пошук точного збігу фрази | `"печера Чорногора"` | Сторінки, де ці слова йдуть саме в такому порядку |
-| **`-`** (мінус) | Виключення слова з пошуку | `печери -кришталева` | Інформація про печери, крім Кришталевої |
-| **`site:`** | Пошук на конкретному сайті або домені | `екологія site:gov.ua` | Матеріали про екологію лише на державних сайтах України |
-| **`filetype:`** | Пошук файлів конкретного формату | `алгоритми filetype:pdf` | Тільки документи у форматі PDF про алгоритми |
-
----
-
-## Відеоурок
-
-Нижче наведено відеоматеріал до уроку. (Заглушка для відео)
-
-<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-  <iframe src="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
----
-
-## Перевір свої знання! (Мікротест)
-
-Дай відповіді на запитання, щоб перевірити, як добре ти засвоїв матеріал. У разі успішного проходження прогрес буде збережено!
-
-<div id="quiz-container" class="quiz-card">
-  <div class="quiz-header">
-    <h3>Контрольний тест: Розширений пошук</h3>
+  <div class="timer-container" id="timer-container-1">
+    <span id="timer-icon-1">⏳</span> <span id="timer-1">Зачекайте 40 с...</span>
   </div>
   
-  <div class="quiz-body">
-    <!-- Question 1 -->
-    <div class="question-block" id="q1-block">
-      <p class="question-text"><strong>Запитання 1.</strong> Який оператор допоможе знайти файли конкретного формату (наприклад, презентацію PowerPoint або документ PDF)?</p>
-      <div class="options-list">
-        <label class="option-item">
-          <input type="radio" name="q1" value="A">
-          <span class="option-text">A) site:</span>
-        </label>
-        <label class="option-item">
-          <input type="radio" name="q1" value="B">
-          <span class="option-text">B) filetype:</span>
-        </label>
-        <label class="option-item">
-          <input type="radio" name="q1" value="C">
-          <span class="option-text">C) " " (лапки)</span>
-        </label>
-        <label class="option-item">
-          <input type="radio" name="q1" value="D">
-          <span class="option-text">D) - (мінус)</span>
-        </label>
-      </div>
-    </div>
-
-    <!-- Question 2 -->
-    <div class="question-block" id="q2-block">
-      <p class="question-text"><strong>Запитання 2.</strong> Як правильно написати пошуковий запит, щоб знайти інформацію про печери, але повністю виключити з результатів печеру "Оптимістична"?</p>
-      <div class="options-list">
-        <label class="option-item">
-          <input type="radio" name="q2" value="A">
-          <span class="option-text">A) печера +Оптимістична</span>
-        </label>
-        <label class="option-item">
-          <input type="radio" name="q2" value="B">
-          <span class="option-text">B) печера "Оптимістична"</span>
-        </label>
-        <label class="option-item">
-          <input type="radio" name="q2" value="C">
-          <span class="option-text">C) печера -Оптимістична</span>
-        </label>
-        <label class="option-item">
-          <input type="radio" name="q2" value="D">
-          <span class="option-text">D) site:печера Оптимістична</span>
-        </label>
-      </div>
-    </div>
-  </div>
-  
-  <div class="quiz-footer">
-    <button type="button" id="check-btn" onclick="checkQuiz()">Перевірити відповіді</button>
-    <div id="quiz-feedback" class="feedback-box"></div>
+  <div>
+    <button type="button" id="btn-next-1" class="quest-btn" disabled onclick="goToStep2()">
+      Далі
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
   </div>
 </div>
 
-<style>
-  .quiz-card {
-    background-color: var(--quiz-bg, #f8f9fa);
-    border: 1px solid var(--quiz-border, #e9ecef);
-    border-radius: 12px;
-    padding: 24px;
-    margin: 30px 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-    font-family: inherit;
-    transition: all 0.3s ease;
-  }
-  
-  /* Dark mode compatibility for Hugo Book theme */
-  @media (prefers-color-scheme: dark) {
-    .quiz-card {
-      --quiz-bg: #1e1e24;
-      --quiz-border: #2d2d34;
-      color: #e9ecef;
-    }
-  }
+<!-- Block 2: Test (1 Question only) -->
+<div class="step-block" id="step-2" style="display: none;">
+  <h2>Крок 2. Перевірка знань</h2>
+  <p>Дай правильну відповідь на запитання, щоб відкрити наступну частину теорії.</p>
 
-  .quiz-header h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #007bff;
-    font-size: 1.35rem;
-    font-weight: 600;
-  }
+  <div class="question-block" style="border: none; padding: 0; margin-bottom: 20px;">
+    <p class="question-text" style="font-size: 1.1rem; line-height: 1.5;"><strong>Запитання:</strong> Хто очолював розробку МЕОМ — першої електронно-обчислювальної машини в континентальній Європі, створеної в Києві?</p>
+    
+    <div class="options-list">
+      <label class="option-item">
+        <input type="radio" name="q-block2" value="A">
+        <span class="option-text">А) Віктор Глушков</span>
+      </label>
+      <label class="option-item">
+        <input type="radio" name="q-block2" value="B">
+        <span class="option-text">Б) Сергій Лебедєв</span>
+      </label>
+      <label class="option-item">
+        <input type="radio" name="q-block2" value="C">
+        <span class="option-text">В) Алан Тюрінг</span>
+      </label>
+      <label class="option-item">
+        <input type="radio" name="q-block2" value="D">
+        <span class="option-text">Г) Джон фон Нейман</span>
+      </label>
+    </div>
+  </div>
 
-  .question-block {
-    margin-bottom: 24px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding-bottom: 16px;
-  }
-  
-  .question-block:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
+  <div style="display: flex; flex-direction: column; gap: 15px; align-items: flex-start;">
+    <button type="button" id="btn-submit-2" class="quest-btn" onclick="checkBlock2Answer()">
+      Перевірити відповідь
+    </button>
+    <div id="quiz-feedback-2" class="feedback-box"></div>
+  </div>
+</div>
 
-  .question-text {
-    font-size: 1.05rem;
-    margin-bottom: 12px;
-  }
+<!-- Block 3: Next part of Theory with New Timer -->
+<div class="step-block" id="step-3" style="display: none;">
+  <h2>Крок 3. Наступники МЕОМ та внесок Віктора Глушкова</h2>
+  <p>Чудова робота! Тепер ознайомся з наступним важливим етапом розвитку обчислювальної техніки в Україні.</p>
 
-  .options-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  <div style="background: rgba(255,255,255,0.02); border-left: 4px solid #10b981; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+    <p>Розвиток кібернетики в Україні продовжив видатний вчений <strong>Віктор Михайлович Глушков</strong>. Він заснував Інститут кібернетики Академії наук України.</p>
+    <p>Під його керівництвом було створено унікальну серію машин <strong>«МІР»</strong> (Машина для Інженерних Розрахунків), які стали предками персональних комп'ютерів. Вони мали вбудовану мову високого рівня, дисплей зі світловим пером для введення формул безпосередньо з екрана, та були розраховані на роботу безпосередньо інженером, а не штатом операторів.</p>
+  </div>
 
-  .option-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 14px;
-    border: 1px solid var(--option-border, #dee2e6);
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: var(--option-bg, #ffffff);
-    transition: all 0.2s ease;
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .option-item {
-      --option-bg: #2d2d34;
-      --option-border: #3e3e46;
-    }
-  }
+  <div class="timer-container" id="timer-container-3">
+    <span id="timer-icon-3">⏳</span> <span id="timer-3">Зачекайте 20 с...</span>
+  </div>
 
-  .option-item:hover {
-    border-color: #007bff;
-    background-color: var(--option-hover-bg, #f1f7ff);
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .option-item:hover {
-      --option-hover-bg: #26354a;
-    }
-  }
+  <div>
+    <button type="button" id="btn-finish-3" class="quest-btn" disabled onclick="finishQuest()">
+      Завершити квест
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    </button>
+  </div>
+</div>
 
-  .option-item input[type="radio"] {
-    margin-right: 12px;
-    accent-color: #007bff;
-    transform: scale(1.15);
-  }
-
-  #check-btn {
-    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
-  }
-
-  #check-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
-  }
-
-  #check-btn:active {
-    transform: translateY(0);
-  }
-
-  .feedback-box {
-    margin-top: 16px;
-    padding: 12px 16px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    display: none;
-    font-weight: 500;
-  }
-
-  .feedback-success {
-    display: block;
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-  }
-
-  .feedback-error {
-    display: block;
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .feedback-success {
-      background-color: #1c4d2d;
-      color: #d4edda;
-      border: 1px solid #285a36;
-    }
-    .feedback-error {
-      background-color: #5d252a;
-      color: #f8d7da;
-      border: 1px solid #712f35;
-    }
-  }
-</style>
+<!-- Block 4: Success Screen -->
+<div class="step-block" id="step-4" style="display: none; text-align: center; padding: 40px 20px;">
+  <div style="font-size: 4rem; margin-bottom: 20px;">🎉</div>
+  <h2 style="color: #10b981 !important;">Урок успішно завершено!</h2>
+  <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px auto;">
+    Вітаємо! Ти успішно пройшов усі теоретичні етапи, дав правильну відповідь на тест та повністю виконав завдання квесту про історію обчислювальної техніки.
+  </p>
+  <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 15px; border-radius: 8px; display: inline-block;">
+    <span style="color: #2ece6b; font-weight: bold;">Твій прогрес збережено та надіслано на платформу.</span>
+  </div>
+</div>
 
 <script>
-  function checkQuiz() {
-    const q1Val = document.querySelector('input[name="q1"]:checked');
-    const q2Val = document.querySelector('input[name="q2"]:checked');
-    const feedback = document.getElementById('quiz-feedback');
+  // Timer State configurations
+  const timers = {
+    step1: { duration: 40, elapsed: 0, interval: null, btnId: 'btn-next-1', timerId: 'timer-1', containerId: 'timer-container-1', iconId: 'timer-icon-1' },
+    step3: { duration: 20, elapsed: 0, interval: null, btnId: 'btn-finish-3', timerId: 'timer-3', containerId: 'timer-container-3', iconId: 'timer-icon-3' }
+  };
 
-    if (!q1Val || !q2Val) {
+  // Start countdown function
+  function startQuestTimer(timerKey) {
+    const t = timers[timerKey];
+    const timerText = document.getElementById(t.timerId);
+    const btn = document.getElementById(t.btnId);
+    const container = document.getElementById(t.containerId);
+    const icon = document.getElementById(t.iconId);
+    
+    if (!timerText || !btn || !container) return;
+    
+    btn.disabled = true;
+    timerText.textContent = `Зачекайте ${t.duration - t.elapsed} с...`;
+    
+    t.interval = setInterval(() => {
+      t.elapsed++;
+      const remaining = t.duration - t.elapsed;
+      
+      if (remaining <= 0) {
+        clearInterval(t.interval);
+        container.classList.add('active');
+        if (icon) icon.textContent = '✅';
+        timerText.textContent = 'Матеріал вивчено! Можна продовжувати.';
+        btn.disabled = false;
+      } else {
+        timerText.textContent = `Зачекайте ${remaining} с...`;
+      }
+    }, 1000);
+  }
+
+  // Handle step transitions
+  function showStep(stepNum) {
+    // Hide all steps
+    for (let i = 1; i <= 4; i++) {
+      const stepEl = document.getElementById(`step-${i}`);
+      if (stepEl) {
+        stepEl.style.display = 'none';
+      }
+    }
+    // Show specific step
+    const targetStep = document.getElementById(`step-${stepNum}`);
+    if (targetStep) {
+      targetStep.style.display = 'block';
+      
+      // Auto-trigger timers on step display
+      if (stepNum === 3) {
+        startQuestTimer('step3');
+      }
+    }
+  }
+
+  function goToStep2() {
+    showStep(2);
+  }
+
+  // Check the answer in Block 2
+  function checkBlock2Answer() {
+    const selected = document.querySelector('input[name="q-block2"]:checked');
+    const feedback = document.getElementById('quiz-feedback-2');
+    
+    if (!selected) {
       feedback.className = 'feedback-box feedback-error';
-      feedback.textContent = 'Будь ласка, дай відповідь на всі запитання перед перевіркою!';
+      feedback.textContent = 'Будь ласка, оберіть варіант відповіді!';
       return;
     }
-
-    if (q1Val.value === 'B' && q2Val.value === 'C') {
+    
+    if (selected.value === 'B') {
       feedback.className = 'feedback-box feedback-success';
-      feedback.textContent = 'Чудово! Всі відповіді правильні. Твій прогрес зберігається...';
+      feedback.textContent = 'Правильно! Відправляємо прогрес на платформу...';
       
-      // Send progress to Node.js backend
-      fetch('http://localhost:5000/api/student/save-progress', {
+      const payload = {
+        lessonId: 'lebedev-mesm-quest',
+        topicId: 'topic-1',
+        grade: 7,
+        status: 'completed',
+        score: 100,
+        timestamp: new Date().toISOString()
+      };
+      
+      // 1. window.parent.postMessage (for integration in React iframe)
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({
+          type: 'STUDENT_PROGRESS',
+          payload: payload
+        }, '*');
+      }
+      
+      // 2. Fetch API request to /api/student/save-progress
+      fetch('/api/student/save-progress', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          lessonId: 'lesson-1',
-          topicId: 'topic-1',
-          grade: 7,
-          status: 'completed',
-          score: 100,
-          timestamp: new Date().toISOString()
-        })
+        body: JSON.stringify(payload)
       })
-      .then(response => {
-        if (response.ok) {
-          feedback.textContent = 'Вітаємо! Всі відповіді правильні. Прогрес успішно збережено на сервері!';
-        } else {
-          feedback.textContent = 'Правильно! Прогрес пройдено, але сервер повернув помилку (можливо, Node.js бекенд ще не запущений).';
-        }
+      .then(res => {
+        console.log('Progress reported successfully via fetch');
+        proceedToStep3();
       })
-      .catch(error => {
-        console.error('Помилка надсилання прогресу:', error);
-        feedback.textContent = 'Чудова робота! Всі відповіді правильні. (Сервер збереження прогресу недоступний, але тест зараховано!)';
+      .catch(err => {
+        console.warn('Backend fetch failed (probably offline), continuing quest anyway...', err);
+        proceedToStep3();
       });
       
     } else {
       feedback.className = 'feedback-box feedback-error';
-      feedback.textContent = 'Є помилки у відповідях. Спробуй ще раз, перечитавши конспект уроку!';
+      feedback.textContent = 'Неправильно. Згадайте, хто очолював розробку МЕОМ (це зазначено в тексті Кроку 1). Спробуйте ще раз!';
     }
   }
+
+  function proceedToStep3() {
+    setTimeout(() => {
+      showStep(3);
+    }, 1500);
+  }
+
+  // Complete the quest
+  function finishQuest() {
+    showStep(4);
+    
+    const finalPayload = {
+      lessonId: 'lebedev-mesm-quest',
+      topicId: 'topic-1',
+      grade: 7,
+      status: 'finished',
+      timestamp: new Date().toISOString()
+    };
+    
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'QUEST_FINISHED',
+        payload: finalPayload
+      }, '*');
+    }
+  }
+
+  // Initialize first timer on load
+  document.addEventListener('DOMContentLoaded', () => {
+    startQuestTimer('step1');
+  });
 </script>

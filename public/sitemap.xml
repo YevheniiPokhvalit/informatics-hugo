@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/practice/topic-1/lesson-1/</loc>
+    <loc>https://example.org/practice/topic-1/lesson-1/</loc>
   </url><url>
-    <loc>http://localhost:1313/practice/</loc>
+    <loc>https://example.org/practice/</loc>
   </url><url>
-    <loc>http://localhost:1313/practice/topic-1/</loc>
+    <loc>https://example.org/practice/topic-1/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.org/</loc>
   </url>
 </urlset>

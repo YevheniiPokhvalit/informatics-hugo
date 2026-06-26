@@ -1,0 +1,196 @@
+// Clear backgrounds to make them transparent
+html,
+body,
+.container,
+.book-page,
+.markdown,
+.book-article,
+main {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+// Text colors for dark theme integration (Slate-200 and White)
+body,
+.markdown,
+.book-article,
+p,
+li,
+td,
+th,
+span,
+label {
+  color: #e2e8f0 !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6,
+strong {
+  color: #ffffff !important;
+}
+
+// Completely hide navigation elements, headers, and footers
+.book-menu,
+.book-toc,
+.book-header,
+.book-footer,
+.book-comments,
+.book-copyright {
+  display: none !important;
+}
+
+// Allow the main content container to span the full page width
+.book-page {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-grow: 1 !important;
+}
+
+.book-article {
+  max-width: 100% !important;
+  padding: 1.5rem !important;
+}
+
+/* --- Quest step blocks style --- */
+.step-block {
+  animation: fadeIn 0.5s ease-out forwards;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  margin: 20px 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timer styles */
+.timer-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 20px;
+  color: #ffc107 !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.timer-container.active {
+  background: rgba(40, 167, 69, 0.1);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  color: #28a745 !important;
+}
+
+/* Premium Buttons */
+.quest-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff !important;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.quest-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+}
+
+.quest-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.quest-btn:disabled {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  box-shadow: none;
+  cursor: not-allowed;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Quiz Option list */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-item:hover {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.option-item input[type="radio"] {
+  margin-right: 14px;
+  accent-color: #3b82f6;
+  transform: scale(1.2);
+}
+
+.option-text {
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+/* Feedback message box */
+.feedback-box {
+  margin-top: 15px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.feedback-success {
+  display: block;
+  background: rgba(40, 167, 69, 0.15);
+  color: #2ece6b !important;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.feedback-error {
+  display: block;
+  background: rgba(220, 53, 69, 0.15);
+  color: #f86b7a !important;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}

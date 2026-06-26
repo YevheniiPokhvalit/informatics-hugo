@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Практикум on Інформатика 7 клас</title>
-    <link>http://localhost:1313/practice/</link>
+    <link>https://example.org/practice/</link>
     <description>Recent content in Практикум on Інформатика 7 клас</description>
     <generator>Hugo</generator>
     <language>uk-ua</language>
-    <atom:link href="http://localhost:1313/practice/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/practice/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
