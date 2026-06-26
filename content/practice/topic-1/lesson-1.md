@@ -25,10 +25,14 @@ weight: 1
     <span id="timer-icon-1">⏳</span> <span id="timer-1">Зачекайте 40 с...</span>
   </div>
   
-  <div>
+  <div class="quest-nav">
+    <button type="button" class="quest-nav-btn" disabled>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Назад
+    </button>
     <button type="button" id="btn-next-1" class="quest-btn" disabled onclick="goToStep2()">
       Далі
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </button>
   </div>
 </div>
@@ -61,11 +65,20 @@ weight: 1
     </div>
   </div>
 
-  <div style="display: flex; flex-direction: column; gap: 15px; align-items: flex-start;">
+  <div id="quiz-feedback-2" class="feedback-box"></div>
+
+  <div class="quest-nav">
+    <button type="button" class="quest-nav-btn" onclick="showStep(1)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Назад
+    </button>
     <button type="button" id="btn-submit-2" class="quest-btn" onclick="checkBlock2Answer()">
       Перевірити відповідь
     </button>
-    <div id="quiz-feedback-2" class="feedback-box"></div>
+    <button type="button" id="btn-next-2" class="quest-nav-btn" disabled onclick="showStep(3)">
+      Далі
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
   </div>
 </div>
 
@@ -83,27 +96,59 @@ weight: 1
     <span id="timer-icon-3">⏳</span> <span id="timer-3">Зачекайте 20 с...</span>
   </div>
 
-  <div>
+  <div class="quest-nav">
+    <button type="button" class="quest-nav-btn" onclick="showStep(2)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Назад
+    </button>
     <button type="button" id="btn-finish-3" class="quest-btn" disabled onclick="finishQuest()">
       Завершити квест
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
     </button>
   </div>
 </div>
 
 <!-- Block 4: Success Screen -->
-<div class="step-block" id="step-4" style="display: none; text-align: center; padding: 40px 20px;">
+<div class="step-block" id="step-4" style="display: none; text-align: center; padding: 40px 24px;">
   <div style="font-size: 4rem; margin-bottom: 20px;">🎉</div>
-  <h2 style="color: #10b981 !important;">Урок успішно завершено!</h2>
-  <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px auto;">
-    Вітаємо! Ти успішно пройшов усі теоретичні етапи, дав правильну відповідь на тест та повністю виконав завдання квесту про історію обчислювальної техніки.
+  <h2 style="color: #10b981 !important; font-weight: 700; margin-bottom: 15px;">Урок успішно завершено!</h2>
+  <p style="font-size: 1.1rem; max-width: 650px; margin: 0 auto 25px auto; line-height: 1.6;">
+    Вітаємо! Ти успішно пройшов усі теоретичні етапи, дав правильну відповідь на тест та повністю виконав завдання квесту про історію обчислювальної техніки. Твій прогрес збережено та надіслано на платформу.
   </p>
-  <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 15px; border-radius: 8px; display: inline-block;">
-    <span style="color: #2ece6b; font-weight: bold;">Твій прогрес збережено та надіслано на платформу.</span>
+  
+  <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 35px; flex-wrap: wrap;">
+    <div class="stat-badge">
+      <span>🎓 Твоя оцінка:</span>
+      <strong id="final-score">12</strong>
+      <span>балів</span>
+    </div>
+    <div class="coin-badge">
+      <span>🪙 Нараховано монет:</span>
+      <strong id="final-coins">+60</strong>
+    </div>
+  </div>
+
+  <div class="quest-nav" style="justify-content: center; gap: 20px; border-top: none; margin-top: 10px;">
+    <button type="button" class="quest-nav-btn" onclick="showStep(3)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Назад
+    </button>
+    <button type="button" class="quest-btn" onclick="goToLessons()">
+      Повернутися до уроків
+    </button>
   </div>
 </div>
 
 <script>
+  // Quest Configuration
+  const totalTests = 1;
+  let isCompleted = false;
+
+  // Grade calculation formula: (CorrectAnswers / TotalTests) * 12
+  function calculateScore(correctAnswers, total) {
+    return Math.round((correctAnswers / total) * 12);
+  }
+
   // Timer State configurations
   const timers = {
     step1: { duration: 40, elapsed: 0, interval: null, btnId: 'btn-next-1', timerId: 'timer-1', containerId: 'timer-container-1', iconId: 'timer-icon-1' },
@@ -112,6 +157,8 @@ weight: 1
 
   // Start countdown function
   function startQuestTimer(timerKey) {
+    if (isCompleted) return; // Skip if already completed
+    
     const t = timers[timerKey];
     const timerText = document.getElementById(t.timerId);
     const btn = document.getElementById(t.btnId);
@@ -139,6 +186,49 @@ weight: 1
     }, 1000);
   }
 
+  // Disable all timers and allow free navigation
+  function bypassTimers() {
+    isCompleted = true;
+    
+    // Clear any running intervals
+    if (timers.step1.interval) clearInterval(timers.step1.interval);
+    if (timers.step3.interval) clearInterval(timers.step3.interval);
+    
+    // Enable all navigation buttons
+    const btnNext1 = document.getElementById('btn-next-1');
+    const btnNext2 = document.getElementById('btn-next-2');
+    const btnFinish3 = document.getElementById('btn-finish-3');
+    
+    if (btnNext1) btnNext1.disabled = false;
+    if (btnNext2) btnNext2.disabled = false;
+    if (btnFinish3) btnFinish3.disabled = false;
+    
+    // Update labels to show completion
+    const t1 = document.getElementById('timer-1');
+    const t3 = document.getElementById('timer-3');
+    if (t1) t1.textContent = 'Матеріал вивчено (пройдено раніше).';
+    if (t3) t3.textContent = 'Матеріал вивчено (пройдено раніше).';
+    
+    const container1 = document.getElementById('timer-container-1');
+    const container3 = document.getElementById('timer-container-3');
+    if (container1) container1.classList.add('active');
+    if (container3) container3.classList.add('active');
+    
+    const icon1 = document.getElementById('timer-icon-1');
+    const icon3 = document.getElementById('timer-icon-3');
+    if (icon1) icon1.textContent = '✅';
+    if (icon3) icon3.textContent = '✅';
+
+    // Auto check correct answer B
+    const radioB = document.querySelector('input[name="q-block2"][value="B"]');
+    if (radioB) radioB.checked = true;
+
+    // Prefill grades
+    const score12 = calculateScore(1, totalTests);
+    document.getElementById('final-score').textContent = score12;
+    document.getElementById('final-coins').textContent = `+${score12 * 5}`;
+  }
+
   // Handle step transitions
   function showStep(stepNum) {
     // Hide all steps
@@ -148,13 +238,13 @@ weight: 1
         stepEl.style.display = 'none';
       }
     }
-    // Show specific step
+    // Show target step
     const targetStep = document.getElementById(`step-${stepNum}`);
     if (targetStep) {
       targetStep.style.display = 'block';
       
-      // Auto-trigger timers on step display
-      if (stepNum === 3) {
+      // Auto-trigger step 3 timer
+      if (stepNum === 3 && !isCompleted) {
         startQuestTimer('step3');
       }
     }
@@ -179,13 +269,19 @@ weight: 1
       feedback.className = 'feedback-box feedback-success';
       feedback.textContent = 'Правильно! Прогрес надіслано на платформу.';
       
-      // Send LESSON_COMPLETED postMessage to parent React window
+      const final12Score = calculateScore(1, totalTests);
+      
+      // Send LESSON_COMPLETED postMessage to parent React window with 12-grade score
       window.parent.postMessage({
         type: 'LESSON_COMPLETED',
         lesson_id: 1,
-        score: 1,
+        score: final12Score,
         step: 3
       }, '*');
+      
+      // Enable next step button on Card 2
+      const btnNext2 = document.getElementById('btn-next-2');
+      if (btnNext2) btnNext2.disabled = false;
       
       proceedToStep3();
     } else {
@@ -202,6 +298,12 @@ weight: 1
 
   // Complete the quest
   function finishQuest() {
+    const final12Score = calculateScore(1, totalTests);
+    
+    // Dynamically write score and coin values
+    document.getElementById('final-score').textContent = final12Score;
+    document.getElementById('final-coins').textContent = `+${final12Score * 5}`;
+    
     showStep(4);
     
     const finalPayload = {
@@ -209,6 +311,7 @@ weight: 1
       topicId: 'topic-1',
       grade: 7,
       status: 'finished',
+      score: final12Score,
       timestamp: new Date().toISOString()
     };
     
@@ -220,9 +323,36 @@ weight: 1
     }
   }
 
-  // Initialize first timer on load
+  // PostMessage interface to return to the React platform
+  function goToLessons() {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'GO_TO_LESSONS' }, '*');
+    }
+  }
+
+  // Listen for lesson status events from React parent
+  window.addEventListener('message', (event) => {
+    const message = event.data;
+    if (message && message.type === 'LESSON_STATUS_RESPONSE') {
+      if (message.status === 'completed') {
+        bypassTimers();
+        showStep(4); // Immediately show success screen
+      }
+    }
+  });
+
+  // Ask for status and start timer on load
   document.addEventListener('DOMContentLoaded', () => {
-    startQuestTimer('step1');
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'CHECK_LESSON_STATUS', lesson_id: 1 }, '*');
+    }
+    
+    // Fallback: Start step1 timer in case React doesn't reply or isn't connected
+    setTimeout(() => {
+      if (!isCompleted) {
+        startQuestTimer('step1');
+      }
+    }, 100);
   });
 </script>
 {{< /rawhtml >}}
