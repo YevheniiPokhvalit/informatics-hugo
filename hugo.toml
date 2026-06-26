@@ -1,0 +1,12 @@
+baseURL = 'https://example.org/'
+locale = 'uk-ua'
+title = 'Інформатика 7 клас'
+theme = 'book'
+
+[params]
+  BookSection = '*'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

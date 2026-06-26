@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Інформатика 7 клас</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Інформатика 7 клас</description>
+    <generator>Hugo</generator>
+    <language>uk-ua</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Пошук в Інтернеті. Розширений пошук</title>
+      <link>http://localhost:1313/practice/topic-1/lesson-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/practice/topic-1/lesson-1/</guid>
+      <description>&lt;h1 id=&#34;пошук-в-інтернеті-розширений-пошук&#34;&gt;Пошук в Інтернеті. Розширений пошук&lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d0%be%d1%88%d1%83%d0%ba-%d0%b2-%d1%96%d0%bd%d1%82%d0%b5%d1%80%d0%bd%d0%b5%d1%82%d1%96-%d1%80%d0%be%d0%b7%d1%88%d0%b8%d1%80%d0%b5%d0%bd%d0%b8%d0%b9-%d0%bf%d0%be%d1%88%d1%83%d0%ba&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Вітаємо на першому уроці інформатики для 7 класу! Сьогодні ми дізнаємося, як зробити ваш пошук в Інтернеті професійним, швидким та точним.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-навіщо-потрібен-розширений-пошук&#34;&gt;1. Навіщо потрібен розширений пошук?&lt;a class=&#34;anchor&#34; href=&#34;#1-%d0%bd%d0%b0%d0%b2%d1%96%d1%89%d0%be-%d0%bf%d0%be%d1%82%d1%80%d1%96%d0%b1%d0%b5%d0%bd-%d1%80%d0%be%d0%b7%d1%88%d0%b8%d1%80%d0%b5%d0%bd%d0%b8%d0%b9-%d0%bf%d0%be%d1%88%d1%83%d0%ba&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Коли ми вводимо простий запит у пошуковий рядок Google, система повертає мільйони вебсторінок. Більшість із них можуть бути нерелевантними. Для того щоб звузити коло пошуку та швидко знайти потрібні відомості (наприклад, конкретний документ, статтю певною мовою чи зображення з певними ліцензійними правами), використовують &lt;strong&gt;інструменти пошуку&lt;/strong&gt; та &lt;strong&gt;розширений пошук&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
