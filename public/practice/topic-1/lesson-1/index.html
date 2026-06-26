@@ -366,42 +366,17 @@ https://github.com/alex-shpak/hugo-book
     
     if (selected.value === 'B') {
       feedback.className = 'feedback-box feedback-success';
-      feedback.textContent = 'Правильно! Відправляємо прогрес на платформу...';
+      feedback.textContent = 'Правильно! Прогрес надіслано на платформу.';
       
-      const payload = {
-        lessonId: 'lebedev-mesm-quest',
-        topicId: 'topic-1',
-        grade: 7,
-        status: 'completed',
-        score: 100,
-        timestamp: new Date().toISOString()
-      };
+      // Send LESSON_COMPLETED postMessage to parent React window
+      window.parent.postMessage({
+        type: 'LESSON_COMPLETED',
+        lesson_id: 1,
+        score: 1,
+        step: 3
+      }, '*');
       
-      // 1. window.parent.postMessage (for integration in React iframe)
-      if (window.parent && window.parent !== window) {
-        window.parent.postMessage({
-          type: 'STUDENT_PROGRESS',
-          payload: payload
-        }, '*');
-      }
-      
-      // 2. Fetch API request to /api/student/save-progress
-      fetch('/api/student/save-progress', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      })
-      .then(res => {
-        console.log('Progress reported successfully via fetch');
-        proceedToStep3();
-      })
-      .catch(err => {
-        console.warn('Backend fetch failed (probably offline), continuing quest anyway...', err);
-        proceedToStep3();
-      });
-      
+      proceedToStep3();
     } else {
       feedback.className = 'feedback-box feedback-error';
       feedback.textContent = 'Неправильно. Згадайте, хто очолював розробку МЕОМ (це зазначено в тексті Кроку 1). Спробуйте ще раз!';
