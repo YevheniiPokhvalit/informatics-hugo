@@ -127,8 +127,7 @@ weight: 1
         <circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/>
         <text x="12" y="16" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">c</text>
       </svg>
-      <span>Нараховано монет:</span>
-      <strong style="color: #fbbf24; font-size: 1.2rem;">+<span id="earned-coins">0</span></strong>
+      <span>Нараховано <span id="earned-coins" style="font-weight: bold; color: #fbbf24; font-size: 1.2rem;">0</span> 🪙</span>
     </div>
   </div>
 
@@ -148,6 +147,7 @@ weight: 1
   const totalTests = 1;
   let isCompleted = false;
   let reviewMode = false;
+  let earnedCoinsCount = null;
 
   // Event listener for messages from React parent
   window.addEventListener('message', function(event) {
@@ -155,6 +155,7 @@ weight: 1
       activateReviewMode();
     }
     if (event.data.type === 'UPDATE_COINS_DISPLAY') {
+      earnedCoinsCount = event.data.coins;
       const coinsEl = document.getElementById('earned-coins');
       if (coinsEl) {
         coinsEl.innerText = event.data.coins;
@@ -258,7 +259,9 @@ weight: 1
     const final12Score = calculateScore(1, totalTests);
     document.getElementById('final-score').textContent = final12Score;
     const coinsEl = document.getElementById('earned-coins');
-    if (coinsEl) coinsEl.textContent = `${final12Score * 5}`;
+    if (coinsEl) {
+      coinsEl.textContent = earnedCoinsCount !== null ? earnedCoinsCount : `${final12Score * 5}`;
+    }
     
     // Switch to final block immediately
     showStep(4);
@@ -343,7 +346,9 @@ weight: 1
     // Dynamically write score and coin values
     document.getElementById('final-score').textContent = final12Score;
     const coinsEl = document.getElementById('earned-coins');
-    if (coinsEl) coinsEl.textContent = `${final12Score * 5}`;
+    if (coinsEl) {
+      coinsEl.textContent = earnedCoinsCount !== null ? earnedCoinsCount : `${final12Score * 5}`;
+    }
     
     showStep(4);
     
