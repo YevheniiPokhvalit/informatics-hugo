@@ -63,6 +63,16 @@ strong {
   padding: 1.5rem !important;
 }
 
+/* --- Highlight block boxes --- */
+.highlight-box {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid var(--accent-color);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease;
+}
+
 /* --- Quest step blocks style --- */
 .step-block {
   animation: fadeIn 0.5s ease-out forwards;
@@ -269,4 +279,92 @@ strong {
   align-items: center;
   gap: 8px;
   box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+}
+
+/* --- LIGHT THEME SYNCHRONIZATION OVERRIDES --- */
+body.light-theme {
+  background: #f8fafc !important;
+  background-color: #f8fafc !important;
+
+  &,
+  .markdown,
+  .book-article,
+  p,
+  li,
+  td,
+  th,
+  span,
+  label {
+    color: #0f172a !important;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6,
+  strong {
+    color: #090d16 !important;
+  }
+
+  .step-block {
+    background: #ffffff !important;
+    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05) !important;
+  }
+
+  .highlight-box {
+    background: #f1f5f9 !important;
+    border-left-color: var(--accent-color) !important;
+  }
+
+  .video-container {
+    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05) !important;
+  }
+
+  .option-item {
+    background: #f1f5f9 !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  .option-item:hover {
+    background: rgba(var(--accent-color-rgb), 0.05) !important;
+    border-color: rgba(var(--accent-color-rgb), 0.3) !important;
+  }
+
+  .option-text {
+    color: #334155 !important;
+  }
+
+  .quest-nav {
+    border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
+  }
+
+  .quest-nav-btn {
+    background: #f1f5f9 !important;
+    color: #334155 !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  .quest-nav-btn:hover:not(:disabled) {
+    background: #e2e8f0 !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  .quest-nav-btn:disabled {
+    background: #f8fafc !important;
+    color: #94a3b8 !important;
+    border-color: #e2e8f0 !important;
+    opacity: 0.5;
+  }
+
+  .quest-btn:disabled {
+    background: #e2e8f0 !important;
+    color: #94a3b8 !important;
+    border: 1px solid #cbd5e1 !important;
+    opacity: 0.6;
+  }
+
+  .stat-badge {
+    box-shadow: 0 4px 12px rgba(var(--accent-color-rgb), 0.05) !important;
+  }
 }
