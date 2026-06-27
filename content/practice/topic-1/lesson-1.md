@@ -161,7 +161,48 @@ weight: 1
         coinsEl.innerText = event.data.coins;
       }
     }
+    if (event.data.type === 'CHANGE_THEME') {
+      applyThemeAccent(event.data.theme);
+    }
   });
+
+  // Dynamic theme accent switching
+  function applyThemeAccent(theme) {
+    let accent, rgb, gradStart, gradEnd, hoverStart, hoverEnd;
+    
+    if (theme === 'green') {
+      accent = '#10b981';
+      rgb = '16, 185, 129';
+      gradStart = '#10b981';
+      gradEnd = '#047857';
+      hoverStart = '#34d399';
+      hoverEnd = '#059669';
+    } else if (theme === 'blue') {
+      accent = '#3b82f6';
+      rgb = '59, 130, 246';
+      gradStart = '#3b82f6';
+      gradEnd = '#1d4ed8';
+      hoverStart = '#60a5fa';
+      hoverEnd = '#2563eb';
+    } else if (theme === 'purple') {
+      accent = '#8b5cf6';
+      rgb = '139, 92, 246';
+      gradStart = '#8b5cf6';
+      gradEnd = '#6d28d9';
+      hoverStart = '#a78bfa';
+      hoverEnd = '#7c3aed';
+    } else {
+      return;
+    }
+    
+    document.documentElement.style.setProperty('--accent-color', accent);
+    document.documentElement.style.setProperty('--accent-color-rgb', rgb);
+    document.documentElement.style.setProperty('--accent-gradient-start', gradStart);
+    document.documentElement.style.setProperty('--accent-gradient-end', gradEnd);
+    document.documentElement.style.setProperty('--accent-hover-start', hoverStart);
+    document.documentElement.style.setProperty('--accent-hover-end', hoverEnd);
+  }
+
 
   // Grade calculation formula: (CorrectAnswers / TotalTests) * 12
   function calculateScore(correctAnswers, total) {

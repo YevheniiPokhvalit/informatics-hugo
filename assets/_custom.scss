@@ -1,3 +1,13 @@
+// Root theme variables for dynamic styling
+:root {
+  --accent-color: #3b82f6;
+  --accent-color-rgb: 59, 130, 246;
+  --accent-gradient-start: #3b82f6;
+  --accent-gradient-end: #1d4ed8;
+  --accent-hover-start: #60a5fa;
+  --accent-hover-end: #2563eb;
+}
+
 // Clear backgrounds to make them transparent
 html,
 body,
@@ -100,7 +110,7 @@ strong {
 
 /* Premium Buttons */
 .quest-btn {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--accent-gradient-start) 0%, var(--accent-gradient-end) 100%);
   color: #ffffff !important;
   border: none;
   padding: 12px 28px;
@@ -112,15 +122,15 @@ strong {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(var(--accent-color-rgb), 0.3);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 
 .quest-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
-  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+  box-shadow: 0 6px 20px rgba(var(--accent-color-rgb), 0.4);
+  background: linear-gradient(135deg, var(--accent-hover-start) 0%, var(--accent-hover-end) 100%);
 }
 
 .quest-btn:active:not(:disabled) {
@@ -155,13 +165,13 @@ strong {
 }
 
 .option-item:hover {
-  background: rgba(59, 130, 246, 0.08);
-  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(var(--accent-color-rgb), 0.08);
+  border-color: rgba(var(--accent-color-rgb), 0.4);
 }
 
 .option-item input[type="radio"] {
   margin-right: 14px;
-  accent-color: #3b82f6;
+  accent-color: var(--accent-color);
   transform: scale(1.2);
 }
 
@@ -234,17 +244,17 @@ strong {
 
 /* Dynamic Grade & Coin badge styling on final screen */
 .stat-badge {
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: rgba(var(--accent-color-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-color-rgb), 0.25);
   padding: 12px 24px;
   border-radius: 12px;
-  color: #60a5fa !important;
+  color: var(--accent-hover-start) !important;
   font-weight: bold;
   font-size: 1.1rem;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 12px rgba(var(--accent-color-rgb), 0.1);
 }
 
 .coin-badge {
